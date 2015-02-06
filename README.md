@@ -35,3 +35,6 @@ A super clean and easy to use starter kit for using Gulp and Less. This should h
 - All files in `assets/js/*` (except for `libs`) will be compressed to scripts.min.js
 
 
+#### Special Thanks
+
+To Kenny Song for his contributions
