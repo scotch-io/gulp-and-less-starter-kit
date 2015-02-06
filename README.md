@@ -1,7 +1,13 @@
 # Starter kit to use Gulp with Less.
 ====================================
-
 A super clean and easy to use starter kit for using Gulp and Less. This should help you repurpose Gulp and Less for your own projects.
+
+- Read the article: : http://scotch.io/tutorials/getting-started-with-less
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=5nqWhwsMQqs
+" target="_blank"><img src="http://img.youtube.com/vi/5nqWhwsMQqs/0.jpg" width="240" height="180" border="10" /></a>
+
 
 ## Features
 
