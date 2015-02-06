@@ -1,2 +1,31 @@
-# gulp-and-less-starter-kit
-Starter kit to use Gulp with Less.
+# Starter kit to use Gulp with Less.
+====================================
+
+A super clean and easy to use starter kit for using Gulp and Less. This should help you repurpose Gulp and Less for your own projects.
+
+## Features
+
+### LESS / CSS Stuff
+- Watches for Less changes on save
+- Checks for Less errors and outputs them without you having to rerun Gulp
+- Autoprefixes for legacy browsers
+- Combines all CSS into one big and sexy minified file
+- Includes Less Bootstrap
+
+### Javascript Stuff
+- Automatically compiles all jQuery libraries into one big file JS file
+- Lints custom scripts for errors
+- Combines all custom scripts into one file
+
+## How To Use
+    $ git@github.com:scotch-io/gulp-and-less-starter-kit.git
+    $ cd gulp-and-less-starter-kit
+    $ npm install
+    $ gulp
+
+## Quick Tips
+- Any changes in `assets/less/*` will trigger the Less to compile on save
+- All files in `assets/js/libs/*`  will be compressed to `build/jquery.plugins.min.js`
+- All files in `assets/js/*` (except for `libs`) will be compressed to scripts.min.js
+
+

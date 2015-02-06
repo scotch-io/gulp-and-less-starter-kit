@@ -1,0 +1,1 @@
+console.log('some jquery plugin 2');
