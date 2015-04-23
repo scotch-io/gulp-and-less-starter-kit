@@ -24,7 +24,7 @@ A super clean and easy to use starter kit for using Gulp and Less. This should h
 - Combines all custom scripts into one file
 
 ## How To Use
-    $ git@github.com:scotch-io/gulp-and-less-starter-kit.git
+    $ git clone git@github.com:scotch-io/gulp-and-less-starter-kit.git
     $ cd gulp-and-less-starter-kit
     $ npm install
     $ gulp
