@@ -28,6 +28,11 @@ A super clean and easy to use starter kit for using Gulp and Less. This should h
     $ cd gulp-and-less-starter-kit
     $ npm install
     $ gulp
+    
+    
+## Updates
+
+If this isn't working, it's probably because you need to update. Just run `npm update --save-dev`
 
 ## Quick Tips
 - Any changes in `assets/less/*` will trigger the Less to compile on save
