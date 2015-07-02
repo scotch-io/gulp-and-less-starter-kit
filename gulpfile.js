@@ -1,7 +1,10 @@
-// Load Gulp
-var gulp    = require('gulp'),
-    gutil   = require('gulp-util');
-    plugins = require('gulp-load-plugins')();
+(function () {
+    'use strict';
+   
+ // Load Gulp
+var    gulp    = require('gulp');
+var    gutil   = require('gulp-util');
+var    plugins = require('gulp-load-plugins')();
 
 // Start Watching: Run "gulp"
 gulp.task('default', ['watch']);
@@ -59,3 +62,5 @@ gulp.task('watch', function() {
     gulp.watch('assets/js/*.js', ['build-js']);
     gulp.watch('assets/less/**/*.less', ['build-css']);
 });
+
+})();
