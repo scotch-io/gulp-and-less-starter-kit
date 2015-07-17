@@ -32,7 +32,19 @@ A super clean and easy to use starter kit for using Gulp and Less. This should h
     
 ## Updates
 
-If this isn't working, it's probably because you need to update. Just run `npm update --save-dev`
+**If this isn't working**, it's probably because you need to update. Just run `npm update --save-dev`
+
+### Still broken or not working?
+
+Try this:
+
+```javascript
+sudo npm cache clean
+npm install --save-dev
+npm update --save-dev
+gulp
+```
+
 
 ## Quick Tips
 - Any changes in `assets/less/*` will trigger the Less to compile on save
