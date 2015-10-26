@@ -2,6 +2,9 @@
 var gulp    = require('gulp'),
     gutil   = require('gulp-util');
     plugins = require('gulp-load-plugins')();
+    imagemin = require('gulp-imagemin');
+    pngquant = require('imagemin-pngquant');
+
 
 // Start Watching: Run "gulp"
 gulp.task('default', ['watch']);
@@ -22,6 +25,16 @@ gulp.task('build-js', function() {
     .pipe(plugins.uglify())
     .pipe(plugins.concat('scripts.min.js'))
     .pipe(gulp.dest('build'));
+});
+
+gulp.task('images', function () {
+    return gulp.src('assets/img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+        }))
+        .pipe(pngquant({quality: '65-70', speed: 4})())
+        .pipe(gulp.dest('build/img'));
 });
 
 // Less to CSS: Run manually with: "gulp build-css"
@@ -58,4 +71,6 @@ gulp.task('watch', function() {
     gulp.watch('assets/js/libs/**/*.js', ['squish-jquery']);
     gulp.watch('assets/js/*.js', ['build-js']);
     gulp.watch('assets/less/**/*.less', ['build-css']);
+    gulp.watch('assets/img/*.jpg', ['images']);
+    gulp.watch('assets/img/*.png', ['images']);
 });

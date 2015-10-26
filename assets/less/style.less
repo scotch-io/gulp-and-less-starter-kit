@@ -4,7 +4,45 @@
 // Base Styles
 @import 'slices/base.less';
 
-
+body{
+	overflow-x: hidden;
+}
 a {
     color: red;
 }
+
+
+.navbar-default{
+	position:absolute;
+	bottom:0;
+}
+.fixed {
+	position: fixed; 
+	top: 0; 
+	z-index: 1;
+	height: 50px;
+}
+
+
+
+section{
+	padding-top:50px;
+}
+section#inicio {
+	height: 100vh;
+	background-image: url("img/background-clean.jpg");
+}
+section#quemsou {
+	height: 50vh;
+	background: #2ecc71;
+}
+section#jobs {
+	height: 100vh;
+	background: #3498db;
+}
+section#contato {
+	height: 100vh;
+	background: #34495e;
+	color:#fff;
+}
+
