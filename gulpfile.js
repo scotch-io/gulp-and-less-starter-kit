@@ -1,7 +1,7 @@
 // Load Gulp
 var gulp    = require('gulp'),
     gutil   = require('gulp-util');
-    plugins = require('gulp-load-plugins')();
+var plugins = require('gulp-load-plugins')();
 
 // Start Watching: Run "gulp"
 gulp.task('default', ['watch']);
