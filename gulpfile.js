@@ -1,15 +1,23 @@
 // Load Gulp
 var gulp    = require('gulp'),
     gutil   = require('gulp-util'),
-    plugins = require('gulp-load-plugins')();
+    plugins = require('gulp-load-plugins')({
+        rename: {
+            'gulp-live-server': 'serve'
+        }
+    });
 
 // Start Watching: Run "gulp"
-gulp.task('default', ['watch']);
+gulp.task('default', ['serve']);
 
 // Minify jQuery Plugins: Run manually with: "gulp squish-jquery"
 gulp.task('squish-jquery', function() {
   return gulp.src('assets/js/libs/**/*.js')
-    .pipe(plugins.uglify())
+    .pipe(plugins.uglify({
+            output: {
+                'ascii_only': true
+            }
+        }))
     .pipe(plugins.concat('jquery.plugins.min.js'))
     .pipe(gulp.dest('build'));
 });
@@ -19,7 +27,11 @@ gulp.task('build-js', function() {
   return gulp.src('assets/js/*.js')
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'))
-    .pipe(plugins.uglify())
+    .pipe(plugins.uglify({
+            output: {
+                'ascii_only': true
+            }
+        }))
     .pipe(plugins.concat('scripts.min.js'))
     .pipe(gulp.dest('build'));
 });
@@ -54,8 +66,15 @@ gulp.task('build-css', function() {
 });
 
 // Default task
-gulp.task('watch', function() {
+gulp.task('serve', function() {
+    var server = plugins.serve.static('build', 8888);
+    server.start();
+    
     gulp.watch('assets/js/libs/**/*.js', ['squish-jquery']);
     gulp.watch('assets/js/*.js', ['build-js']);
     gulp.watch('assets/less/**/*.less', ['build-css']);
+    
+    gulp.watch(['assets/less/**/*.less', 'assets/js/*.js', 'assets/js/libs/**/*.js'], function (file) {
+        server.notify.apply(server, [file]);
+    });
 });
