@@ -73,10 +73,10 @@ gulp.task('watch', function () {
     gulp.watch('assets/less/**/*.less', ['build-css']);
 });
 
-// Folder "build" serving at http://localhost:8888
+// Folder "/" serving at http://localhost:8888
 // Should use Livereload (http://livereload.com/extensions/)
 gulp.task('serve', function () {
-    var server = plugins.serve.static('build', 8888);
+    var server = plugins.serve.static('/', 8888);
     server.start();
     gulp.watch(['assets/less/**/*.less', 'assets/js/*.js', 'assets/js/libs/**/*.js'], function (file) {
         server.notify.apply(server, [file]);
