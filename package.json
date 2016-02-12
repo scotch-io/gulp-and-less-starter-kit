@@ -1,10 +1,11 @@
 {
-  "name": "Scotchy",
-  "version": "1.0.0",
+  "name": "scotchy",
+  "version": "1.0.1",
   "description": "Gulp Starter with Less",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,13 @@
     "gulp-concat": "^2.4.3",
     "gulp-cssmin": "^0.1.6",
     "gulp-jshint": "^1.9.2",
-    "gulp-less": "3.0.1",
+    "gulp-less": "^3.0.1",
     "gulp-load-plugins": "^0.8.0",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "gulp-live-server": "^0.0.29"
   }
 }
