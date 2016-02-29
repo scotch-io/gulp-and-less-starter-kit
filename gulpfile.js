@@ -78,7 +78,7 @@ gulp.task('watch', function () {
 gulp.task('serve', function () {
     var server = plugins.serve.static('/', 8888);
     server.start();
-    gulp.watch(['assets/less/**/*.less', 'assets/js/*.js', 'assets/js/libs/**/*.js'], function (file) {
+    gulp.watch(['build/*'], function (file) {
         server.notify.apply(server, [file]);
     });
 });
